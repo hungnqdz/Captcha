@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Verification</title>
+    <!-- Link đến Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #e9ecef;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 80px;
+            max-width: 700px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        .card-title {
+            font-weight: bold;
+            font-size: 1.75rem;
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        .list-group-item {
+            border: none;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 50px;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #007bff;
+            transition: color 0.3s ease;
+            font-size: 1.5rem;
+        }
+        .social-icons a:hover {
+            color: #0056b3;
+        }
+        /* Đường viền cho nút khi di chuột */
+        .btn-custom:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Bot Verification</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Chọn phương thức xác minh bot:</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="/captcha_image_page" class="btn btn-custom btn-block">
+                            <i class="fas fa-image"></i> Image Captcha
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/audio_captcha_page" class="btn btn-custom btn-block">
+                            <i class="fas fa-volume-up"></i> Audio Captcha
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/recaptchav2" class="btn btn-custom btn-block">
+                            <i class="fab fa-google"></i> reCAPTCHA v2
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/recaptchav3" class="btn btn-custom btn-block">
+                            <i class="fab fa-google"></i> reCAPTCHA v3
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="bypass_audio_captcha.html" class="btn btn-custom btn-block">
+                            <i class="fas fa-bell-slash"></i> Bypass Audio Captcha
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bot Verification. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <!-- Link đến Bootstrap JS và jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

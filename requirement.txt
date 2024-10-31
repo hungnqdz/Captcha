@@ -1,0 +1,10 @@
+Flask
+captcha
+DrissionPage
+pydub
+SpeechRecognition
+pytesseract
+speechrecognition
+google-cloud
+requests
+google-cloud-recaptcha-enterprise
