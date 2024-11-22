@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_file, session
+from flask import Flask, render_template, request, send_file, session, url_for, redirect
 import captcha_service
 import gcloud_service
 
@@ -17,8 +17,6 @@ def captcha_audio():
 
 @app.route('/captcha_image_page', methods=['GET'])
 def image_captcha_page():
-    captcha_text = captcha_service.generate_captcha_text()
-    session['captcha_text'] = captcha_text
     return render_template('image_captcha.html')
 
 
@@ -69,7 +67,9 @@ def login_with_captcha_v3():
     username = data.get('username')
     password = data.get('password')
     token = data.get('token')
-    result = captcha_service.recaptcha_v3_verify(token,'login')
+
+    # Verify the reCAPTCHA token
+    result = captcha_service.recaptcha_v3_verify(token, 'login')
     return result
 
 

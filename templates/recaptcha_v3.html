@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS styles */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f8f9fa;
@@ -17,6 +16,7 @@
             justify-content: center;
             align-items: center;
         }
+
         .login-container {
             background-color: #ffffff;
             padding: 40px;
@@ -33,11 +33,13 @@
     <form id="login-form">
         <div class="form-group">
             <label for="username"><i class="fas fa-user"></i> Tên Đăng Nhập</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Nhập tên đăng nhập" required>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Nhập tên đăng nhập"
+                   required>
         </div>
         <div class="form-group">
             <label for="password"><i class="fas fa-lock"></i> Mật Khẩu</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="Nhập mật khẩu" required>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Nhập mật khẩu"
+                   required>
         </div>
         <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-sign-in-alt"></i> Đăng Nhập</button>
     </form>
@@ -46,7 +48,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeF6m0qAAAAAF6dO3c9-zzo6eqoZ3xLs5P4bvQV"></script>
 <script>
-    document.getElementById('login-form').addEventListener('submit', async function(event) {
+    document.getElementById('login-form').addEventListener('submit', async function (event) {
         event.preventDefault();
 
         const username = document.getElementById('username').value;
@@ -60,11 +62,10 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ username, password, token })
+                body: JSON.stringify({username, password, token})
             });
+            console.log(response)
 
-            const result = await response.json();
-            alert(result)
         });
     });
 </script>

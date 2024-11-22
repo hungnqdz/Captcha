@@ -1,7 +1,7 @@
 import requests
 from captcha.image import ImageCaptcha
 from captcha.audio import AudioCaptcha
-import random
+
 from io import BytesIO
 
 RECAPTCHA_SECRET_KEY = '6LeyInEqAAAAAFf5YooGZBQBO5XFb6u6KIYZUPMV'
@@ -25,7 +25,7 @@ def recaptcha_v3_verify(token, action):
         "event": {
             "token": token,
             "siteKey": "6LeF6m0qAAAAAF6dO3c9-zzo6eqoZ3xLs5P4bvQV",
-            "expectedAction": "login"
+            "expectedAction": action
         }
     }
     verify_response = requests.post(url_v3, json=payload, headers=headers)

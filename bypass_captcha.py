@@ -59,7 +59,7 @@ class CaptchaSolver:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Bypass CAPTCHA for CTF")
+    parser = argparse.ArgumentParser(description="Bypass CAPTCHA")
     parser.add_argument('-i', action='store_true', help="Bypass image CAPTCHA")
     parser.add_argument('-a', action='store_true', help="Bypass audio CAPTCHA")
     parser.add_argument('-u', '--url', type=str, required=True, help="URL of CAPTCHA image or audio")
